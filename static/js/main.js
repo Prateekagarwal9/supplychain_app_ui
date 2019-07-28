@@ -20,7 +20,7 @@ $(document).ready(function(){
     }
     for(var i = 0; i < a.length; i++)
     {
-        $("#"+a[i]+"_show").find('input:text').val('');
+        $("#"+a[i]+"_show").find('input').val('');
         $("#"+a[i]+"_show").hide();
     }
      $("#"+this.value+"_show").show();
