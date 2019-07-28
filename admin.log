@@ -39,3 +39,6 @@ u'{"time":"2019-07-28 19:49:28,370","name":"root","level": "ERROR","module": "vi
 u'{"time":"2019-07-28 19:49:50,713","name":"root","level": "ERROR","module": "views","line": "172","message": "You need to provide an account name and either an account_key or sas_token when creating a storage service."}'
 u'{"time":"2019-07-28 19:52:00,219","name":"root","level": "ERROR","module": "views","line": "172","message": "You need to provide an account name and either an account_key or sas_token when creating a storage service."}'
 u'{"time":"2019-07-28 19:53:36,149","name":"root","level": "ERROR","module": "views","line": "172","message": "You need to provide an account name and either an account_key or sas_token when creating a storage service."}'
+u'{"time":"2019-07-28 20:11:21,767","name":"root","level": "ERROR","module": "views","line": "175","message": "local variable 'os' referenced before assignment"}'
+u'{"time":"2019-07-28 20:12:08,070","name":"root","level": "ERROR","module": "views","line": "175","message": "local variable 'os' referenced before assignment"}'
+u'{"time":"2019-07-28 20:12:49,426","name":"root","level": "ERROR","module": "views","line": "175","message": "local variable 'os' referenced before assignment"}'
