@@ -8,7 +8,7 @@ apt-get -y install jq ;
 git clone https://github.com/Prateekagarwal9/supplychain;
 chmod +x supplychain;
 echo Celebal;
-expect creds.sh $1 $2;
+expect /home/site/wwwroot/azure_blob_app/databricks_linux/creds.sh $1 $2;
 # sudo databricks workspace import  -f DBC -l SCALA supplychain/ARIMA.dbc /ARIMA;
 # sudo databricks workspace import  -f DBC -l SCALA supplychain/Prophet.dbc /Prophet;
 # sudo databricks workspace import  -f DBC -l SCALA supplychain/Holt-Winter /Holt-Winter;
