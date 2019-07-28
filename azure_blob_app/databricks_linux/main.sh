@@ -14,12 +14,12 @@ expect /home/site/wwwroot/azure_blob_app/databricks_linux/creds.sh $1 $2;
 # sudo databricks workspace import  -f DBC -l SCALA supplychain/Holt-Winter /Holt-Winter;
 databricks workspace import  -f DBC -l SCALA supplychain/Supply-Chain-Solution.dbc /Supply-Chain-Solution;
 databricks fs mkdirs dbfs:/databricks/init/$3/;
-databricks fs cp arima_installation.sh dbfs:/databricks/init/$3/;
-databricks fs cp prophet_installation.sh dbfs:/databricks/init/$3/;
-databricks fs cp holtwinter_installation.sh dbfs:/databricks/init/$3/;
-databricks fs cp lstm_installation.sh dbfs:/databricks/init/$3/;
-databricks fs cp xgboost_installation.sh dbfs:/databricks/init/$3/;
-databricks fs cp or_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux//home/site/wwwroot/azure_blob_app/databricks_linux/arima_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux/prophet_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux/holtwinter_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux/lstm_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux/xgboost_installation.sh dbfs:/databricks/init/$3/;
+databricks fs cp /home/site/wwwroot/azure_blob_app/databricks_linux/or_installation.sh dbfs:/databricks/init/$3/;
 
 runid=$(databricks jobs create --json-file arima.json);
 echo $runid;
