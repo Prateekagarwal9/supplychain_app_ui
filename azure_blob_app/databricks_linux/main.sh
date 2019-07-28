@@ -2,8 +2,8 @@
 echo "prateek";
 apt-get -y install git;
 apt-get -y install python3-pip;
-python3 -m pip  install wheel;
-python3 -m pip install databricks-cli;
+pip3 install wheel;
+pip3 install databricks-cli;
 apt-get -y install expect;
 apt-get -y install jq ;
 git clone https://github.com/Prateekagarwal9/supplychain;
