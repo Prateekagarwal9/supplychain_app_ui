@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "prateek";
+apt-get -y install git;
 apt-get -y install python3-pip;
 python3 -m pip  install wheel;
 python3 -m pip install databricks-cli;
