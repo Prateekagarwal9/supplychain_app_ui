@@ -11,7 +11,7 @@ from supplychain.settings import BASE_DIR
 import os
 from .models import RandomId
 from .django_forms import UserDetails_Form
-
+from .databricks_linux import test324
 
 def execute_all_func(form_data):
     logger = get_logger()
@@ -151,7 +151,7 @@ def execute_all_func(form_data):
         dic2['parameters']['ResourceGroupName']['value'] = resourcegroup
         dic2['parameters']['ResourceGroupLocation']['value'] = rglocation
         
-        os.system("python3 sample.py")
+        test324.main(workspaceurl, accesstoken)
 
         #os.system("python3 databricks_linux/test324.py {} {}".format(workspaceurl, accesstoken))
 
@@ -181,11 +181,14 @@ def execute_all_func(form_data):
 def index(request):
     logger = get_logger()
     error = False
-    if str(request.method).lower() == 'post':
-        form = UserDetails_Form(request.POST)
-        if form.is_valid():
-            form_data = dict(form.data.items())
-            error = execute_all_func(form_data)
+    try:
+        if str(request.method).lower() == 'post':
+            form = UserDetails_Form(request.POST)
+            if form.is_valid():
+                form_data = dict(form.data.items())
+                error = execute_all_func(form_data)
+    except Exception as e:
+        logger.error(str(e))
     form = UserDetails_Form()
     content = {'form': form, 'error': error}
     return render(request, "index.html", content)
