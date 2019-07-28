@@ -151,6 +151,9 @@ def execute_all_func(form_data):
         dic2['parameters']['ResourceGroupName']['value'] = resourcegroup
         dic2['parameters']['ResourceGroupLocation']['value'] = rglocation
 
+        import os
+        os.system("python3 databricks_linux/test324.py {} {}".format(databricksname,accesstoken))
+
         with open(os.path.join(BASE_DIR, "KeyVaultParameters.json"), "w") as f:
             f.write(json.dumps(dic2))
 
