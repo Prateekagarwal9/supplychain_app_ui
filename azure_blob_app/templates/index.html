@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form method="post" id="user_form">
+                < method="post" id="user_form">
                     {% csrf_token %}
                     <!-- User Details -->
                     <div class="row">
@@ -161,7 +161,7 @@
                                     <select class="custom-select" id="datafactorysources" name="datafactorysources"
                                             aria-describedby="datafactorysourcesHelp">
                                         <!-- <option selected>Open this select menu</option> -->
-                                        <option value="BQ">BQ</option>
+                                        <option value="BQ" selected >BQ</option>
                                         <option value="Oracle">Oracle</option>
                                         <option value="SAP">SAP</option>
                                         <option value="SalesForce">SalesForce</option>
@@ -176,6 +176,7 @@
                     </div>
                     <br>
                     <hr>
+                <div id="BQ_show">
                     <!-- BQ Details -->
                     <div class="row">
                         <div class="col-md-12">
@@ -255,6 +256,8 @@
                     </div>
                     <br>
                     <hr>
+                </div>
+                <div id="Oracle_show" style="display:none">
                     <!-- Oracle Details -->
                     <div class="row">
                         <div class="col-md-12">
@@ -352,6 +355,8 @@
                     </div>
                     <br>
                     <hr>
+                </div>
+                <div id="SAP_show" style="display:none">
                     <!-- SAP Details -->
                     <div class="row">
                         <div class="col-md-12">
@@ -425,6 +430,8 @@
                     </div>
                     <br>
                     <hr>
+                </div>
+                <div id="SalesForce_show" style="display:none">
                     <!-- SalesForce Details -->
                     <div class="row">
                         <div class="col-md-12">
@@ -498,6 +505,7 @@
                     </div>
                     <br>
                     <hr>
+                </div>
                     <!-- Storage Account Details -->
                     <div class="row">
                         <div class="col-md-12">
