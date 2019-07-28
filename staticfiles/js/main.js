@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(".generate").click(function(){
         $.ajax({
             type: "get",
-            url: "http://localhost:8000/all/",
+            url: "/all/",
             contentType: 'application/json',
             success: function(data){
                 $('#generateuniqueid').val(data['output']);
@@ -12,17 +12,17 @@ $(document).ready(function(){
             }
         });
     });
-    $('#finalsubmit').click(function(a,b){
-    var a = {};
-    var c = [];
-    console.log("")
-    $('input,select').each(function(j,k){
-    console.log($(j));
-//    a[$(j).attr('name')] = $(j).val();
-//    c.push(a);
-//    console.log(j,k);
-//    console.log($(k).val());
-    })
-    console.log(b)
-    })
+    $('#datafactorysources').on('change', function() {
+    var a = ["BQ", "Oracle", "SAP", "SalesForce"];
+    if (a.indexOf(this.value) > -1)
+    {
+        a.splice(a.indexOf(this.value, 1));
+    }
+    for(var i = 0; i < a.length; i++)
+    {
+        $("#"+a[i]+"_show").find('input').val('');
+        $("#"+a[i]+"_show").hide();
+    }
+     $("#"+this.value+"_show").show();
+    });
 });
